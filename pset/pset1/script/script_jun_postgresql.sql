@@ -20,13 +20,13 @@ WITH   		owner = jun
        		lc_ctype = 'pt_BR.UTF-8'
        		allow_connections = TRUE;
 
---
+--Ligação de usuário jun com a banco de dados uvv através de mesma senha.
 \c "dbname=uvv user=jun password=abcd2023xx";
 
 --Criar uma schema caso lojas não tenha autorizado por usuario jun.
 CREATE SCHEMA   	IF NOT EXISTS lojas AUTHORIZATION jun;
 
---Alteração de usuário jun para 
+--Alteração de usuário jun para mudar o esquema public para lojas. 
 ALTER USER jun
 SET SEARCH_PATH TO lojas, "$user", public;
 
