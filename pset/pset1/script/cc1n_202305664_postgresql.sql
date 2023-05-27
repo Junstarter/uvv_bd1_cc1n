@@ -5,7 +5,7 @@ DROP DATABASE  	IF EXISTS uvv;
 DROP USER 	IF EXISTS jun;
 
 --Criar o usuario.
-CREATE USER jun
+CREATE USER 	jun
 WITH  		createdb
       		createrole
       		encrypted
@@ -27,11 +27,11 @@ WITH   		owner = jun
 CREATE 	SCHEMA  IF NOT EXISTS lojas AUTHORIZATION jun;
 
 --Alteração de usuário jun para mudar o esquema public para lojas. 
-ALTER 	USER jun
-SET 	SEARCH_PATH TO lojas, "$user", public;
+ALTER USER	jun
+SET 		SEARCH_PATH TO lojas, "$user", public;
 
 --Criação de tabela com o nome de lojas.produtos.
-CREATE TABLE lojas.produtos (
+CREATE TABLE 	lojas.produtos (
        		produto_id       				NUMERIC(38) 	NOT NULL,
       		nome            				NUMERIC(255) 	NOT NULL,
       		preco_unitario   				NUMERIC(10,2),
@@ -41,13 +41,13 @@ CREATE TABLE lojas.produtos (
      		imagem_arquivo   				VARCHAR(512),
      		imagem_charset   				VARCHAR(512),
       		imagem_ultima_atualizacao 			DATE,      
-CONSTRAINT pk_produtos 						PRIMARY KEY (produto_id)
+CONSTRAINT 	pk_produtos 					PRIMARY KEY 	(produto_id)
 );
 
 --Checkagem da tabela lojas.produtos para o preço da unidade do produto não ser negativo e nem zero.
-ALTER TABLE lojas.produtos
-ADD CONSTRAINT ck_preco_unitario_produtos
-CHECK (preco_unitario > 0);
+ALTER TABLE 	lojas.produtos
+ADD CONSTRAINT 	ck_preco_unitario_produtos
+CHECK 		(preco_unitario > 0);
 
 --Comentários para explicações de tabela e colunas de tabela lojas.produto.
 COMMENT ON TABLE  lojas.produtos				IS 'A tabela produtos que tem por sua responsabilidade de guardar os dados dos produtos.';
@@ -72,25 +72,25 @@ COMMENT ON COLUMN lojas.produtos.imagem_ultima_atualizacao 	IS 'Coluna imagem_ul
 
 
 --Criação de tabela com o nome de lojas.lojas.
-CREATE TABLE lojas.lojas (
-	     loja_id 						NUMERIC(38) 	NOT NULL,
-             nome 						VARCHAR(255) 	NOT NULL,
-             endereco_web 					VARCHAR(200),
-             endereco_fisico 					VARCHAR(512),
-             latitude 						NUMERIC,
-             longitude 						NUMERIC,
-             logo BYTEA,
-             logo_mime_type 					VARCHAR(512),
-             logo_arquivo 					VARCHAR(512),
-             logo_charset 					VARCHAR(512),
-             logo_ultima_atualizacao 				DATE,
-CONSTRAINT pk_lojas 						PRIMARY KEY (loja_id)
+CREATE TABLE 	lojas.lojas (
+	     	loja_id 					NUMERIC(38) 	NOT NULL,
+             	nome 						VARCHAR(255) 	NOT NULL,
+             	endereco_web 					VARCHAR(200),
+             	endereco_fisico 				VARCHAR(512),
+             	latitude 					NUMERIC,
+             	longitude 					NUMERIC,
+             	logo 						BYTEA,
+             	logo_mime_type 					VARCHAR(512),
+             	logo_arquivo 					VARCHAR(512),
+             	logo_charset 					VARCHAR(512),
+             	logo_ultima_atualizacao 			DATE,
+CONSTRAINT 	pk_lojas 					PRIMARY KEY 	(loja_id)
 );
 
 --Checkagem da tabela lojas.lojas para o preço do produto não ser negativo e nem zero.
-ALTER TABLE lojas.lojas
-ADD CONSTRAINT ck_endereco_fisico_e_web_lojas
-CHECK (endereco_fisico IS NOT NULL OR endereco_web IS NOT NULL);
+ALTER TABLE  	lojas.lojas
+ADD CONSTRAINT 	ck_endereco_fisico_e_web_lojas
+CHECK 		(endereco_fisico IS NOT NULL OR endereco_web IS NOT NULL);
 
 --Comentários para explicações de tabela e colunas de tabela lojas.lojas.
 COMMENT ON TABLE lojas.lojas					IS 'A tabela lojas que tem por sua responsabilidade de guardar os dados das lojas.';
@@ -118,18 +118,18 @@ COMMENT ON COLUMN lojas.lojas.logo_charset			IS 'Coluna logo_charset que é resp
 COMMENT ON COLUMN lojas.lojas.logo_ultima_atualizacao		IS 'Coluna logo_ultima_atualizacao que é responsável por armazenar a ultima atualização de um logo da loja.';
 
 --Criação de tabela com nome de lojas.estoques.
-CREATE TABLE lojas.estoques (
-             estoque_id 					NUMERIC(38) 	NOT NULL,
-             loja_id 						NUMERIC(38) 	NOT NULL,
-             produto_id 					NUMERIC(38) 	NOT NULL,
-             quantidade 					NUMERIC(38) 	NOT NULL,
-  CONSTRAINT pk_estoques 					PRIMARY KEY (estoque_id)
+CREATE TABLE 	lojas.estoques (
+             	estoque_id 					NUMERIC(38) 	NOT NULL,
+             	loja_id 					NUMERIC(38) 	NOT NULL,
+             	produto_id 					NUMERIC(38) 	NOT NULL,
+             	quantidade 					NUMERIC(38) 	NOT NULL,
+CONSTRAINT 	pk_estoques 					PRIMARY KEY (estoque_id)
 );
 
 --Checkagem da tabela lojas.estoques para a quantidade do estoque ser maior que zero.
-ALTER TABLE lojas.estoques
-ADD CONSTRAINT ck_quantidades_lojas_estoques
-CHECK (quantidade > 0);
+ALTER TABLE 	lojas.estoques
+ADD CONSTRAINT 	ck_quantidades_lojas_estoques
+CHECK 		(quantidade > 0);
 
 --Comentários para explicações de tabela e colunas de tabela lojas.estoques.
 COMMENT ON TABLE  lojas.estoques				IS 'A tabela estoques que tem por sua responsabilidade de guardar os estoques dos produtos para as lojas.';
@@ -144,14 +144,14 @@ COMMENT ON COLUMN lojas.estoques.quantidade			IS 'Coluna quantidade que é respo
 
 
 --Criação de tabela com o nome de lojas.clientes.
-CREATE TABLE lojas.clientes (
-             cliente_id 					NUMERIC(38) 	NOT NULL,
-             email 						VARCHAR(255) 	NOT NULL,
-             nome 						VARCHAR(255) 	NOT NULL,
-             telefone1 						VARCHAR(20),
-             telefone2 						VARCHAR(20),
-             telefone3 						VARCHAR(20),
-CONSTRAINT pk_clientes 						PRIMARY KEY (cliente_id)
+CREATE TABLE 	lojas.clientes (
+             	cliente_id 					NUMERIC(38) 	NOT NULL,
+             	email 						VARCHAR(255) 	NOT NULL,
+             	nome 						VARCHAR(255) 	NOT NULL,
+             	telefone1 					VARCHAR(20),
+             	telefone2 					VARCHAR(20),
+             	telefone3 					VARCHAR(20),
+CONSTRAINT 	pk_clientes 					PRIMARY KEY 	(cliente_id)
 );
 
 --Comentários para explicações de tabela e colunas de tabela lojas.clientes.
@@ -170,13 +170,13 @@ COMMENT ON COLUMN lojas.clientes.telefone2			IS 'Coluna telefone2 que é respons
 COMMENT ON COLUMN lojas.clientes.telefone3			IS 'Coluna telefone3 que é responsável por guardar o terceiro número de telefone do cliente.';
 
 --Criação de tabela com o nome de lojas.envios.
-CREATE TABLE lojas.envios (
-	     envio_id 						NUMERIC(38) 	NOT NULL,
-	     loja_id 						NUMERIC(38) 	NOT NULL,
-	     cliente_id 					NUMERIC(38) 	NOT NULL,
-	     endereco_entrega 					VARCHAR(512) 	NOT NULL,
-	     status 						VARCHAR(15) 	NOT NULL,
-CONSTRAINT pk_envios 						PRIMARY KEY (envio_id)
+CREATE TABLE 	lojas.envios (
+	     	envio_id 					NUMERIC(38) 	NOT NULL,
+	     	loja_id 					NUMERIC(38) 	NOT NULL,
+	     	cliente_id 					NUMERIC(38) 	NOT NULL,
+	     	endereco_entrega 				VARCHAR(512) 	NOT NULL,
+	     	status 						VARCHAR(15) 	NOT NULL,
+CONSTRAINT 	pk_envios 					PRIMARY KEY 	(envio_id)
 );
 
 --Comentários para explicações de tabela e colunas de tabela lojas.envios.
@@ -194,13 +194,13 @@ COMMENT ON COLUMN lojas.envios.status				IS 'Coluna status que é responsável p
 
 
 --Criação de tabela com o nome de lojas.pedidos.
-CREATE TABLE lojas.pedidos (
-	     pedido_id 						NUMERIC(38) 	NOT NULL,
-	     data_hora 						TIMESTAMP 	NOT NULL,
-	     cliente_id 					NUMERIC(38) 	NOT NULL,
-	     status 						VARCHAR(15) 	NOT NULL,
-	     loja_id 						NUMERIC(38) 	NOT NULL,
-CONSTRAINT pk_pedidos 						PRIMARY KEY (pedido_id)
+CREATE TABLE 	lojas.pedidos (
+	     	pedido_id 					NUMERIC(38) 	NOT NULL,
+	     	data_hora 					TIMESTAMP 	NOT NULL,
+	     	cliente_id 					NUMERIC(38) 	NOT NULL,
+	     	status 						VARCHAR(15) 	NOT NULL,
+	     	loja_id 					NUMERIC(38) 	NOT NULL,
+CONSTRAINT 	pk_pedidos 					PRIMARY KEY 	(pedido_id)
 );
 
 --Comentários para explicações de tabela e colunas de tabela lojas.pedidos.
@@ -216,14 +216,14 @@ COMMENT ON COLUMN lojas.pedidos.loja_id				IS 'Coluna loja_id que é responsáve
 
 
 --Criação de tabela com o nome de lojas.pedidos-itens.
-CREATE TABLE lojas.pedidos_itens (
-             pedido_id 						NUMERIC(38) 	NOT NULL,
-             produto_id 					NUMERIC(38) 	NOT NULL,
-             numero_da_linha 					NUMERIC(38) 	NOT NULL,
-             preco_unitario 					NUMERIC(10,2) 	NOT NULL,
-             quantidade 					NUMERIC(38) 	NOT NULL,
-             envio_id 						NUMERIC(38),
-CONSTRAINT pk_pedidos_itens 					PRIMARY KEY (pedido_id, produto_id)
+CREATE TABLE 	lojas.pedidos_itens (
+             	pedido_id 					NUMERIC(38) 	NOT NULL,
+             	produto_id 					NUMERIC(38) 	NOT NULL,
+             	numero_da_linha 				NUMERIC(38) 	NOT NULL,
+             	preco_unitario 					NUMERIC(10,2) 	NOT NULL,
+             	quantidade 					NUMERIC(38) 	NOT NULL,
+             	envio_id 					NUMERIC(38),
+CONSTRAINT 	pk_pedidos_itens 				PRIMARY KEY 	(pedido_id, produto_id)
 );
 
 --Comentários para explicações de tabela e colunas de tabela lojas.pedidos_itens.
@@ -245,73 +245,55 @@ COMMENT ON COLUMN lojas.pedidos_itens.envio_id			IS 'Coluna envio_id que é resp
 --Alterações de tabelas para inserção de chave extrangeira/foreigner key.
 
 --Alteração de tabela estoques para adicionar uma fk na coluna produto_id.
-ALTER TABLE lojas.estoques 					ADD CONSTRAINT produtos_estoques_fk
-FOREIGN KEY (produto_id)
-REFERENCES lojas.produtos (produto_id)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
-NOT DEFERRABLE;
+ALTER TABLE 	lojas.estoques 					ADD CONSTRAINT 	produtos_estoques_fk
+		FOREIGN KEY 	(produto_id)			REFERENCES 	lojas.produtos 	(produto_id)
+ON DELETE 	NO ACTION
+ON UPDATE 	NO ACTION					NOT 		DEFERRABLE;
 
 --Alteração de tabela pedidos_itens para adicionar uma fk na coluna produto_id.
-ALTER TABLE lojas.pedidos_itens 				ADD CONSTRAINT produtos_pedidos_itens_fk
-FOREIGN KEY (produto_id)
-REFERENCES lojas.produtos (produto_id)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
-NOT DEFERRABLE;
+ALTER TABLE 	lojas.pedidos_itens 				ADD CONSTRAINT 	produtos_pedidos_itens_fk
+		FOREIGN KEY 	(produto_id)			REFERENCES 	lojas.produtos 	(produto_id)
+ON DELETE 	NO ACTION
+ON UPDATE 	NO ACTION					NOT 		DEFERRABLE;
 
 --Alteração de tabela pedidos para adicionar uma fk na coluna loja_id.
-ALTER TABLE lojas.pedidos 					ADD CONSTRAINT lojas_pedidos_fk
-FOREIGN KEY (loja_id)
-REFERENCES lojas.lojas (loja_id)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
-NOT DEFERRABLE;
+ALTER TABLE 	lojas.pedidos 					ADD CONSTRAINT 	lojas_pedidos_fk
+		FOREIGN KEY 	(loja_id)			REFERENCES 	lojas.lojas 	(loja_id)
+ON DELETE 	NO ACTION
+ON UPDATE 	NO ACTION					NOT 		DEFERRABLE;
 
 --Alteração de tabela envios para adicionar uma fk na coluna loja-id.
-ALTER TABLE lojas.envios 					ADD CONSTRAINT lojas_envios_fk
-FOREIGN KEY (loja_id)
-REFERENCES lojas.lojas (loja_id)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
-NOT DEFERRABLE;
+ALTER TABLE 	lojas.envios 					ADD CONSTRAINT 	lojas_envios_fk
+		FOREIGN KEY 	(loja_id)			REFERENCES 	lojas.lojas 	(loja_id)
+ON DELETE 	NO ACTION
+ON UPDATE 	NO ACTION					NOT 		DEFERRABLE;
 
 --Alteração de tabela estoques para adicionar uma fk na coluna loja_id.
-ALTER TABLE lojas.estoques 					ADD CONSTRAINT lojas_estoques_fk
-FOREIGN KEY (loja_id)
-REFERENCES lojas.lojas (loja_id)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
-NOT DEFERRABLE;
+ALTER TABLE 	lojas.estoques 					ADD CONSTRAINT lojas_estoques_fk
+		FOREIGN KEY 	(loja_id)			REFERENCES 	lojas.lojas 	(loja_id)
+ON DELETE 	NO ACTION
+ON UPDATE 	NO ACTION					NOT 		DEFERRABLE;
 
 --Alteração de tabela pedidos para adicionar uma fk na coluna cliente_id.
-ALTER TABLE lojas.pedidos 					ADD CONSTRAINT clientes_pedidos_fk
-FOREIGN KEY (cliente_id)
-REFERENCES lojas.clientes (cliente_id)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
-NOT DEFERRABLE;
+ALTER TABLE 	lojas.pedidos 					ADD CONSTRAINT clientes_pedidos_fk
+		FOREIGN KEY 	(cliente_id)			REFERENCES 	lojas.clientes 	(cliente_id)
+ON DELETE 	NO ACTION
+ON UPDATE 	NO ACTION					NOT 		DEFERRABLE;
 
 --Alteração de tabela envios para adicionar uma fk na coluna cliente_id.
-ALTER TABLE lojas.envios 					ADD CONSTRAINT clientes_envios_fk
-FOREIGN KEY (cliente_id)
-REFERENCES lojas.clientes (cliente_id)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
-NOT DEFERRABLE;
+ALTER TABLE 	lojas.envios 					ADD CONSTRAINT 	clientes_envios_fk
+		FOREIGN KEY 	(cliente_id)			REFERENCES 	lojas.clientes 	(cliente_id)
+ON DELETE 	NO ACTION
+ON UPDATE 	NO ACTION					NOT 		DEFERRABLE;
 
 --Alteração de tabela pedidos_itens para adicionar uma fk na coluna envio_id.
-ALTER TABLE lojas.pedidos_itens 				ADD CONSTRAINT envios_pedidos_itens_fk
-FOREIGN KEY (envio_id)
-REFERENCES lojas.envios (envio_id)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
-NOT DEFERRABLE;
+ALTER TABLE 	lojas.pedidos_itens 				ADD CONSTRAINT 	envios_pedidos_itens_fk
+		FOREIGN KEY 	(envio_id)			REFERENCES 	lojas.envios 	(envio_id)
+ON DELETE 	NO ACTION
+ON UPDATE 	NO ACTION					NOT 		DEFERRABLE;
 
 --Alteração de tabela pedidos_itens para adicionar uma fk na coluna pedido_id.
-ALTER TABLE lojas.pedidos_itens 				ADD CONSTRAINT pedido_pedidos_itens_fk
-FOREIGN KEY (pedido_id)
-REFERENCES lojas.pedidos (pedido_id)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION
-NOT DEFERRABLE;
+ALTER TABLE 	lojas.pedidos_itens 				ADD CONSTRAINT 	pedido_pedidos_itens_fk
+		FOREIGN KEY 	(pedido_id)			REFERENCES 	lojas.pedidos 	(pedido_id)
+ON DELETE 	NO ACTION
+ON UPDATE 	NO ACTION					NOT 		DEFERRABLE;
