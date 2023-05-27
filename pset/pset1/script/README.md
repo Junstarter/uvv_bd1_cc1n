@@ -1,11 +1,10 @@
-<p><div style="background: #fff; border: 1px #ccc solid; box-shadow: 0 2px 3px 0 #ddd; font-size: 100%; padding: 20px;">
-<p># uvv_bd1_cc1n</p>
+# uvv_bd1_cc1n
 <p>Problem_Set #1<br></p>
 <p>Nome: Erick Jun Kato</p>
 <p>Matéria: Design e desenvolvimento de Banco de Dados</p>
 <p>Professor: Abrantes Araújo Silva Filho</p>
 <div align="center">
-<samp></div><p>
+<samp>
 
 # **Trabalho de Banco de Dados!**
 
