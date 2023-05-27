@@ -3,12 +3,10 @@
      Nome: Erick Jun Kato
   Matéria: Design e desenvolvimento de Banco de Dados
 Professor: Abrantes Araújo Silva Filho
-***
-
 <div align="center">
 <samp>
 
-# **Tr!
+# **Trabalho de Banco de Dados!**
 
 Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the **file explorer** on the left corner of the navigation bar.
 
