@@ -15,8 +15,8 @@ USE             uvv;
 
 -- Criação da tabela com o nome lojas.produtos.
 CREATE TABLE 	produtos (
-                produto_id                  NUMERIC(38) 	NOT NULL,
-                nome                        VARCHAR(255) 	NOT NULL,
+                produto_id                  NUMERIC(38)     NOT NULL,
+                nome                        VARCHAR(255)    NOT NULL,
                 preco_unitario              NUMERIC(10,2),
                 detalhes                    BLOB,
                 imagem                      BLOB,
@@ -24,7 +24,7 @@ CREATE TABLE 	produtos (
                 imagem_arquivo              VARCHAR(512),
                 imagem_charset              VARCHAR(512),
                 imagem_ultima_atualizacao   DATE,
-CONSTRAINT      pk_produtos                 PRIMARY KEY  (produto_id)
+CONSTRAINT      pk_produtos                 PRIMARY KEY     (produto_id)
 );
 
 -- Checkagem da tabela lojas.produtos para o preço da unidade do produto não ser negativo e nem zero.
@@ -56,7 +56,7 @@ CREATE TABLE 	lojas (
                 logo_arquivo                VARCHAR(512),
                 logo_charset                VARCHAR(512),
                 logo_ultima_atualizacao     DATE,
-CONSTRAINT      pk_lojas                    PRIMARY KEY (loja_id)
+CONSTRAINT      pk_lojas                    PRIMARY KEY     (loja_id)
 );
 
 -- Checkagem da tabela lojas.lojas para o preço do produto não ser negativo e nem zero.
@@ -84,7 +84,7 @@ CREATE TABLE 	estoques (
                 loja_id                     NUMERIC(38)     NOT NULL,
                 produto_id                  NUMERIC(38)     NOT NULL,
                 quantidade                  NUMERIC(38)     NOT NULL,
-CONSTRAINT      pk_estoques                 PRIMARY KEY (estoque_id)
+CONSTRAINT      pk_estoques                 PRIMARY KEY     (estoque_id)
 );
 
 -- Checkagem da tabela lojas.estoques para a quantidade do estoque ser maior que zero.
@@ -107,7 +107,7 @@ CREATE TABLE    clientes (
                 telefone1                   VARCHAR(20),
                 telefone2                   VARCHAR(20),
                 telefone3                   VARCHAR(20),
-CONSTRAINT      pk_clientes                 PRIMARY KEY (cliente_id)
+CONSTRAINT      pk_clientes                 PRIMARY KEY     (cliente_id)
 );
 
 -- Comentários para explicações de tabela e colunas de tabela lojas.clientes.
@@ -126,7 +126,7 @@ CREATE TABLE    envios (
                 cliente_id                  NUMERIC (38)    NOT NULL,
                 endereco_entrega            VARCHAR(512)    NOT NULL,
                 status                      VARCHAR(15)     NOT NULL,
-CONSTRAINT      pk_envios                   PRIMARY KEY (envio_id)
+CONSTRAINT      pk_envios                   PRIMARY KEY     (envio_id)
 );
 
 -- Comentários para explicações de tabela e colunas de tabela lojas.envios.
@@ -146,7 +146,7 @@ CREATE TABLE    pedidos (
                 cliente_id                  NUMERIC (38)    NOT NULL,
                 status                      VARCHAR (15)    NOT NULL,
                 loja_id                     NUMERIC (38)    NOT NULL,
-CONSTRAINT      pk_pedidos                  PRIMARY KEY (pedido_id)
+CONSTRAINT      pk_pedidos                  PRIMARY KEY     (pedido_id)
 );
 
 -- Comentários para explicações de tabela e colunas de tabela lojas.pedidos.
@@ -164,7 +164,7 @@ CREATE TABLE 	pedidos_itens (
                 preco_unitario              NUMERIC(10, 2)  NOT NULL,
                 quantidade                  NUMERIC(38)     NOT NULL,
                 envio_id                    NUMERIC(38),
-CONSTRAINT      pk_pedidos_itens            PRIMARY KEY (pedido_id, produto_id)
+CONSTRAINT      pk_pedidos_itens            PRIMARY KEY     (pedido_id, produto_id)
 );
 
 -- Comentários para explicações de tabela e colunas de tabela lojas.pedidos_itens.
