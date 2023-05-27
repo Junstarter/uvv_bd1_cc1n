@@ -80,10 +80,10 @@ ALTER TABLE     lojas                       MODIFY COLUMN   logo_ultima_atualiza
 
 -- Criação de tabela com nome de estoques.
 CREATE TABLE 	estoques (
-                estoque_id                  NUMERIC(38) 	NOT NULL,
-                loja_id                     NUMERIC(38) 	NOT NULL,
-                produto_id                  NUMERIC(38) 	NOT NULL,
-                quantidade                  NUMERIC(38) 	NOT NULL,
+                estoque_id                  NUMERIC(38)     NOT NULL,
+                loja_id                     NUMERIC(38)     NOT NULL,
+                produto_id                  NUMERIC(38)     NOT NULL,
+                quantidade                  NUMERIC(38)     NOT NULL,
 CONSTRAINT      pk_estoques                 PRIMARY KEY (estoque_id)
 );
 
@@ -101,9 +101,9 @@ ALTER TABLE     estoques                    MODIFY COLUMN   quantidade          
 
 -- Criação de tabela com o nome de lojas.clientes.
 CREATE TABLE    clientes (
-                cliente_id                  NUMERIC(38)   NOT NULL,
-                email                       VARCHAR(255)  NOT NULL,
-                nome                        VARCHAR(255)  NOT NULL,
+                cliente_id                  NUMERIC(38)     NOT NULL,
+                email                       VARCHAR(255)    NOT NULL,
+                nome                        VARCHAR(255)    NOT NULL,
                 telefone1                   VARCHAR(20),
                 telefone2                   VARCHAR(20),
                 telefone3                   VARCHAR(20),
@@ -158,11 +158,11 @@ ALTER TABLE     pedidos                     MODIFY COLUMN   loja_id 	        NUM
 
 -- Criação de tabela com o nome de lojas.pedidos_itens.
 CREATE TABLE 	pedidos_itens (
-                pedido_id                   NUMERIC(38) 	NOT NULL,
-                produto_id                  NUMERIC(38) 	NOT NULL,
-                numero_da_linha             NUMERIC(38) 	NOT NULL,
-                preco_unitario              NUMERIC(10, 2) 	NOT NULL,
-                quantidade                  NUMERIC(38) 	NOT NULL,
+                pedido_id                   NUMERIC(38)     NOT NULL,
+                produto_id                  NUMERIC(38)     NOT NULL,
+                numero_da_linha             NUMERIC(38)     NOT NULL,
+                preco_unitario              NUMERIC(10, 2)  NOT NULL,
+                quantidade                  NUMERIC(38)     NOT NULL,
                 envio_id                    NUMERIC(38),
 CONSTRAINT      pk_pedidos_itens            PRIMARY KEY (pedido_id, produto_id)
 );
