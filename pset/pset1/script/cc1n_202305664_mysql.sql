@@ -48,14 +48,14 @@ CREATE TABLE 	lojas (
                 loja_id                     NUMERIC(38)     NOT NULL,
                 nome                        VARCHAR(255)    NOT NULL,
                 endereco_web                VARCHAR(200),
-                endereco_fisico         	VARCHAR(512),
-                latitude                	NUMERIC,
-                longitude               	NUMERIC,
-                logo                    	BLOB,
-                logo_mime_type          	VARCHAR(512),
-                logo_arquivo            	VARCHAR(512),
-                logo_charset            	VARCHAR(512),
-                logo_ultima_atualizacao 	DATE,
+                endereco_fisico             VARCHAR(512),
+                latitude                    NUMERIC,
+                longitude                   NUMERIC,
+                logo                        BLOB,
+                logo_mime_type              VARCHAR(512),
+                logo_arquivo                VARCHAR(512),
+                logo_charset                VARCHAR(512),
+                logo_ultima_atualizacao     DATE,
 CONSTRAINT      pk_lojas                    PRIMARY KEY (loja_id)
 );
 
@@ -80,10 +80,10 @@ ALTER TABLE     lojas                       MODIFY COLUMN   logo_ultima_atualiza
 
 -- Criação de tabela com nome de estoques.
 CREATE TABLE 	estoques (
-                estoque_id 		            NUMERIC(38) 	NOT NULL,
-                loja_id 		            NUMERIC(38) 	NOT NULL,
-                produto_id 		            NUMERIC(38) 	NOT NULL,
-                quantidade 		            NUMERIC(38) 	NOT NULL,
+                estoque_id                  NUMERIC(38) 	NOT NULL,
+                loja_id                     NUMERIC(38) 	NOT NULL,
+                produto_id                  NUMERIC(38) 	NOT NULL,
+                quantidade                  NUMERIC(38) 	NOT NULL,
 CONSTRAINT      pk_estoques                 PRIMARY KEY (estoque_id)
 );
 
@@ -101,9 +101,9 @@ ALTER TABLE     estoques                    MODIFY COLUMN   quantidade          
 
 -- Criação de tabela com o nome de lojas.clientes.
 CREATE TABLE    clientes (
-                cliente_id                  NUMERIC(38)		NOT NULL,
-                email                       VARCHAR(255) 	NOT NULL,
-                nome                        VARCHAR(255) 	NOT NULL,
+                cliente_id                  NUMERIC(38)   NOT NULL,
+                email                       VARCHAR(255)  NOT NULL,
+                nome                        VARCHAR(255)  NOT NULL,
                 telefone1                   VARCHAR(20),
                 telefone2                   VARCHAR(20),
                 telefone3                   VARCHAR(20),
@@ -112,18 +112,18 @@ CONSTRAINT      pk_clientes                 PRIMARY KEY (cliente_id)
 
 -- Comentários para explicações de tabela e colunas de tabela lojas.clientes.
 ALTER TABLE     clientes                    COMMENT 'A tabela Clientes que tem por sua responsabilidade de guardar os dados dos seus clientes.';
-ALTER TABLE     clientes                    MODIFY COLUMN   cliente_id 		    NUMERIC(38)  	COMMENT 'Coluna cliente_id que é responsável como identificador único da tabela clientes. Ele também é uma chave primária da tabela clientes.';
+ALTER TABLE     clientes                    MODIFY COLUMN   cliente_id          NUMERIC(38)  	COMMENT 'Coluna cliente_id que é responsável como identificador único da tabela clientes. Ele também é uma chave primária da tabela clientes.';
 ALTER TABLE     clientes                    MODIFY COLUMN   email               VARCHAR(255)   	COMMENT 'Coluna email que é responsável por guardar o email do cliente.';
 ALTER TABLE     clientes                    MODIFY COLUMN   nome                VARCHAR(255)   	COMMENT 'Coluna nome que é responsável por guardar o nome do cliente.';
-ALTER TABLE     clientes                    MODIFY COLUMN   telefone1 		    VARCHAR(20) 	COMMENT 'Coluna telefone1 que é responsável por guardar o número de telefone do cliente.';
-ALTER TABLE     clientes                    MODIFY COLUMN   telefone2 		    VARCHAR(20) 	COMMENT 'Coluna telefone2 que é responsável por guardar o segundo número de telefone do cliente.';
-ALTER TABLE     clientes                    MODIFY COLUMN   telefone3 		    VARCHAR(20) 	COMMENT 'Coluna telefone3 que é responsável por guardar o terceiro número de telefone do cliente.';
+ALTER TABLE     clientes                    MODIFY COLUMN   telefone1           VARCHAR(20) 	COMMENT 'Coluna telefone1 que é responsável por guardar o número de telefone do cliente.';
+ALTER TABLE     clientes                    MODIFY COLUMN   telefone2           VARCHAR(20) 	COMMENT 'Coluna telefone2 que é responsável por guardar o segundo número de telefone do cliente.';
+ALTER TABLE     clientes                    MODIFY COLUMN   telefone3           VARCHAR(20) 	COMMENT 'Coluna telefone3 que é responsável por guardar o terceiro número de telefone do cliente.';
 
 -- Criação de tabela com o nome de lojas.envios.
 CREATE TABLE    envios (
-                envio_id                    NUMERIC (38) 	NOT NULL,
-                loja_id                     NUMERIC (38) 	NOT NULL,
-                cliente_id                  NUMERIC (38)	NOT NULL,
+                envio_id                    NUMERIC (38)    NOT NULL,
+                loja_id                     NUMERIC (38)    NOT NULL,
+                cliente_id                  NUMERIC (38)    NOT NULL,
                 endereco_entrega            VARCHAR(512)    NOT NULL,
                 status                      VARCHAR(15)     NOT NULL,
 CONSTRAINT      pk_envios                   PRIMARY KEY (envio_id)
@@ -133,7 +133,7 @@ CONSTRAINT      pk_envios                   PRIMARY KEY (envio_id)
 ALTER TABLE     envios                      COMMENT 'A tabela envios que tem por sua responsabilidade de guardar os dados dos envios realizados.';
 ALTER TABLE     envios                      MODIFY COLUMN   envio_id            NUMERIC(38)  	COMMENT 'Coluna envio_id que é responsável como identificador único da tabela envios. Ele também é uma chave primária da tabela envios.';
 ALTER TABLE     envios                      MODIFY COLUMN   loja_id             NUMERIC(38)  	COMMENT 'Coluna loja_id que é responsável como identificador da tabela envios. Ele também é uma chave estrangeira da tabela lojas.';
-ALTER TABLE     envios                      MODIFY COLUMN   cliente_id 		    NUMERIC(38) 	COMMENT 'Coluna cliente_id que é responsável como identificador da tabela envios. Ele também é uma chave estrangeira da tabela clientes.';
+ALTER TABLE     envios                      MODIFY COLUMN   cliente_id          NUMERIC(38) 	COMMENT 'Coluna cliente_id que é responsável como identificador da tabela envios. Ele também é uma chave estrangeira da tabela clientes.';
 ALTER TABLE     envios                      MODIFY COLUMN   endereco_entrega    VARCHAR(512)  	COMMENT 'Coluna endereco_entrega que é responsável por guardar o endereço de entrega do envio.';
 ALTER TABLE     envios                      MODIFY COLUMN   status              VARCHAR(15) 	COMMENT 'Coluna status que é responsável por guardar o status do envio.';
 
@@ -141,11 +141,11 @@ ALTER TABLE     envios                      MODIFY COLUMN   status              
 
 -- Criação de tabela com o nome de lojas.pedidos.
 CREATE TABLE    pedidos (
-                pedido_id                   NUMERIC (38) 	NOT NULL,
+                pedido_id                   NUMERIC (38)    NOT NULL,
                 data_hora                   TIMESTAMP       NOT NULL,
-                cliente_id                  NUMERIC (38)	NOT NULL,
+                cliente_id                  NUMERIC (38)    NOT NULL,
                 status                      VARCHAR (15)    NOT NULL,
-                loja_id                     NUMERIC (38) 	NOT NULL,
+                loja_id                     NUMERIC (38)    NOT NULL,
 CONSTRAINT      pk_pedidos                  PRIMARY KEY (pedido_id)
 );
 
@@ -158,12 +158,12 @@ ALTER TABLE     pedidos                     MODIFY COLUMN   loja_id 	        NUM
 
 -- Criação de tabela com o nome de lojas.pedidos_itens.
 CREATE TABLE 	pedidos_itens (
-                pedido_id 			        NUMERIC(38) 	NOT NULL,
-                produto_id 			        NUMERIC(38) 	NOT NULL,
-                numero_da_linha 	        NUMERIC(38) 	NOT NULL,
-                preco_unitario 		        NUMERIC(10, 2) 	NOT NULL,
-                quantidade 			        NUMERIC(38) 	NOT NULL,
-                envio_id 			        NUMERIC(38),
+                pedido_id                   NUMERIC(38) 	NOT NULL,
+                produto_id                  NUMERIC(38) 	NOT NULL,
+                numero_da_linha             NUMERIC(38) 	NOT NULL,
+                preco_unitario              NUMERIC(10, 2) 	NOT NULL,
+                quantidade                  NUMERIC(38) 	NOT NULL,
+                envio_id                    NUMERIC(38),
 CONSTRAINT      pk_pedidos_itens            PRIMARY KEY (pedido_id, produto_id)
 );
 
