@@ -1,148 +1,60 @@
+<br>
+ <div align="end"><p strong>Problem_Set #1<br></p></div>
+<br><br><samp>
+ <div strong align="center"><h1>Trabalho de Banco de Dados!</h1></div>
+<br>
+<h2>Um banco de dados é um sistema para armazenar e gerenciar informações de forma organizada. É como uma coleção de tabelas que armazenam dados para serem facilmente acessados e utilizados quando necessário.
 
-最初にロゴ・アイキャッチ画像などを表示
+<br><br>
 
-# リポジトリ名
-
-概要を記述する
-
-
-## デモ
-
-![デモ](https://image-url.gif)
-
-
-## 使い方
-
-DEMOの実行方法など、"Webアプリ"の基本的な使い方を説明
-
-1. 使い方
-2. 使い方
-3. 使い方
-
-
-## 環境
-
-* 要件
-* 要件
-* 要件
-
-
-## 注意事項
-
-注意点などがあれば書く
-
-
-## 文責
-
-作成情報を列挙する
-
-* 作成者
-* 所属
-* E-mail
-* [@twitter_username](https://twitter.com/twitter_username)
-
-
-## ライセンス
-
-ライセンスを明示する
-
-"uvv_bd_cc1n" is under [no license](https://github.com/nomenome-cmd/uvv_bd1_cc1n).
-
-
-## 参考文献
-
-参考にした情報源（サイト・論文）などの情報、リンク
-
-・[Laravel.com/jp](https://laraweb.net/surrounding/7477/)
-
-・
-
-・
-
-***
-> <h1># Name（リポジトリ/プロジェクト/OSSなどの名前）</h1>
-> <h1>H1</h1>
-> <h1>H1</h1>
-> <h1>a</h1>
-> <h1>a</h1>
-> <h1>a</h1>
-> <h1>a</h1>
-> <h1>a</h1>
-> <h1>a</h1>
-***
-
-> <h2>Name（リポジトリ/プロジェクト/OSSなどの名前）</h2>
-> <h3>1</h3>
-> <h4>H1</h4>
-> <h4>a</h4>
-> <h4>a</h4>
-> <h4>a</h4>
-> <h4>a</h4>
-> <h4>a</h4>
-> <h4>a</h4>
-
-
-# uvv_bd1_cc1n
-Problem_Set #1
-
-***
-
-# H1見出し
-## H２見出し
-### H3見出し
-
-１段落目
-
-（空行をはさむ）
-
-２段落目
-
-
-*強調* または _強調_
-
-
-**強調** または __強い強調__
-
-* リスト１
-    * リスト1_1
-    * リスト1_2
-* リスト２
-* リスト３
-
-1. 順番つきリスト
-2. 順番つきリスト
-3. 順番つきリスト
-
-
-<http://example.com>
-<example@example.com>
-
-
-# 例
-[Google](https://www.google.co.jp/)
-
-
-![Alt text](/path/to/img.jpg)
-
-
-
-```
-function hello(){
-   return "hello world!";
-}
-```
-
-
+ <div align="center">"Aqui está o nosso professor Abrantes Araújo Silva Filho:"</div>
+<br>
+	
 <p align="center">
-<img src="https://raw.githubusercontent.com/honjou/docker_practice/images/logo.png">
-</p>
+<img src="https://github.com/nomenome-cmd/uvv_bd1_cc1n/assets/116921226/ebad47f6-8785-471f-b19f-f08f203ad544"></p>
+
+<div strong align="end">[sobre](https://github.com/abrantesasf)</div>
+	
+<br><br>
+
+<div strong align="center">Sobre aluno</div>
+<h2 strong><p align="start"><br>
+ Nome: Erick Jun Kato</p>
+ Idade: 18 anos</p>
+ Turma: CC1N</p>
+ Ano_Período: 2023_1período</p>
+ Curso: Ciência de Computação</p>
+ Matéria: Design e desenvolvimento de Banco de Dados</p>
+ Professor: Abrantes Araújo Silva Filho</p>
+ Conteúdo: Banco de Dados_sql</p>
+
+<br><br><br><br><br><br>
+
+<div strong align="center">DBSERVER 2.0</div></h2>
+<h2 strong><p align="left"><br>
+ Publicado em 2023-01-02 por Abrantes Araújo Silva Filho</p><br>
+	
+>Já está disponível para download gratuito o DB Server 2.0 do Computação Raiz, que traz tudo o que você precisa para aprender a utilizar diversos Sistemas de Gerenciamento […]
+
+<br>
+<p align="center">
+<img src="https://www.computacaoraiz.com.br/wp-content/uploads/2023/01/dbserver2_print1-1536x864.png"></p>
+
+ <div align="right">
+ [Mais Detalhes](https://www.computacaoraiz.com.br/2023/01/02/dbserver-2/)
+ </div>
+
+<br><br><br>
+	
+>Publicado em Infra, Máquinas virtuaisMarcado com MariaDB, MySQL, oracle, postgres, PostgreSQL, SBD, sgbd, SQL Server5 comentários
+	
+<br><br>
+	
+
+</samp>
+</div>
 
 
-
-
-
-
-
-
-
-
+<div align="end"><h2><strong>uvv_bd1_cc1n</strong></h2></div>
+<br><br>
+<br><br><br>
