@@ -1,8 +1,8 @@
 # uvv_bd1_cc1n
 <p>Problem_Set #1<br></p>
-<p>     Nome: Erick Jun Kato</p>
-  Matéria: Design e desenvolvimento de Banco de Dados
-Professor: Abrantes Araújo Silva Filho
+<p>Nome: Erick Jun Kato</p>
+<p>Matéria: Design e desenvolvimento de Banco de Dados</p>
+<p>Professor: Abrantes Araújo Silva Filho</p>
 <div align="center">
 <samp>
 
