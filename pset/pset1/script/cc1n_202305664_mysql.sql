@@ -129,6 +129,12 @@ CREATE TABLE    envios (
 CONSTRAINT      pk_envios                   PRIMARY KEY     (envio_id)
 );
 
+--Checagem da tabela envios para restringir a inserção de dados da coluna status para ser: Cancelado, Completo, Aberto, Pago, Reembolsa, Enviado.
+ALTER TABLE     lojas.envios
+ADD CONSTRAINT  ck_status
+CHECK           (status in ('CRIADO', 'ENVIADO', 'TRANSITO', 'ENTREGUE');
+
+
 -- Comentários para explicações de tabela e colunas de tabela lojas.envios.
 ALTER TABLE     envios                      COMMENT 'A tabela envios que tem por sua responsabilidade de guardar os dados dos envios realizados.';
 ALTER TABLE     envios                      MODIFY COLUMN   envio_id            NUMERIC(38)  	COMMENT 'Coluna envio_id que é responsável como identificador único da tabela envios. Ele também é uma chave primária da tabela envios.';
@@ -148,6 +154,12 @@ CREATE TABLE    pedidos (
                 loja_id                     NUMERIC (38)    NOT NULL,
 CONSTRAINT      pk_pedidos                  PRIMARY KEY     (pedido_id)
 );
+
+--Checagem da tabela pedidos para restringir a inserção de dados da coluna status para ser: Cancelado, Completo, Aberto, Pago, Reembolsa, Enviado.
+ALTER TABLE     lojas.pedidos
+ADD CONSTRAINT  ck_status
+CHECK           (status in ('CANCELADO', 'COMPLETO', 'ABERTO', 'PAGO', 'REEMBOLSADO', 'ENVIADO');
+
 
 -- Comentários para explicações de tabela e colunas de tabela lojas.pedidos.
 ALTER TABLE     pedidos                     COMMENT 'A tabela pedidos que tem por sua responsabilidade de guardar pedidos dos seus clientes à loja.';
