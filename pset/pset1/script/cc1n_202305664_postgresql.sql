@@ -87,7 +87,7 @@ CREATE TABLE 	lojas.lojas (
 CONSTRAINT 	pk_lojas 					PRIMARY KEY 	(loja_id)
 );
 
---Checkagem da tabela lojas.lojas para o preço do produto não ser negativo e nem zero.
+--Checagem da tabela lojas.lojas para o preço do produto não ser negativo e nem zero.
 ALTER TABLE  	lojas.lojas
 ADD CONSTRAINT 	ck_endereco_fisico_e_web_lojas
 CHECK 		(endereco_fisico IS NOT NULL OR endereco_web IS NOT NULL);
@@ -179,6 +179,11 @@ CREATE TABLE 	lojas.envios (
 CONSTRAINT 	pk_envios 					PRIMARY KEY 	(envio_id)
 );
 
+--Checagem da tabela lojas.envios para restringir a inserção de dados da coluna status para ser: Cancelado, Completo, Aberto, Pago, Reembolsa, Enviado.
+ALTER TABLE  	lojas.envios
+ADD CONSTRAINT 	ck_status
+CHECK 		(status in ('CRIADO', 'ENVIADO', 'TRANSITO', 'ENTREGUE');
+
 --Comentários para explicações de tabela e colunas de tabela lojas.envios.
 COMMENT ON TABLE  lojas.envios					IS 'A tabela envios que tem por sua responsabilidade de guardar os dados de envios dos itens de pedidos para seus clientes e das lojas.';
 			  
@@ -202,6 +207,11 @@ CREATE TABLE 	lojas.pedidos (
 	     	loja_id 					NUMERIC(38) 	NOT NULL,
 CONSTRAINT 	pk_pedidos 					PRIMARY KEY 	(pedido_id)
 );
+
+--Checagem da tabela lojas.pedidos para restringir a inserção de dados da coluna status para ser: Cancelado, Completo, Aberto, Pago, Reembolsa, Enviado.
+ALTER TABLE  	lojas.pedidos
+ADD CONSTRAINT 	ck_status
+CHECK 		(status in ('CANCELADO', 'COMPLETO', 'ABERTO', 'PAGO', 'REEMBOLSADO', 'ENVIADO');
 
 --Comentários para explicações de tabela e colunas de tabela lojas.pedidos.
 COMMENT ON TABLE  lojas.pedidos					IS 'A tabela pedidos que tem por sua responsabilidade de guardar pedidos dos seus clientes à loja.';
