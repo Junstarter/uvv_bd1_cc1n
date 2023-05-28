@@ -3,7 +3,7 @@
  <project-name>Diagrama_de_BDs_das_Lojas_UVV</project-name>
  <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
  <project-data-sources>
-  <data-source id="DS0">
+  <data-source id="DS0"> 
    <property key="Logical" value="PlayPen Database" />
   </data-source>
  </project-data-sources>
