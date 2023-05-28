@@ -13,7 +13,7 @@ FLUSH           PRIVILEGES;
 -- Ligação do usuário jun com o banco de dados uvv através da mesma senha.
 USE             uvv;
 
--- Criação da tabela com o nome lojas.produtos.
+-- Criação de tabela com o nome de produtos que tem como sua função de armazenar os dados como o id do produto, nome do produto, o preço unitário, os detalhes, a imagem, o mime type da imagem, o arquivo da imagem, o charset da imagem e a ultima atualização da imagem dos produtos.
 CREATE TABLE 	produtos (
                 produto_id                  NUMERIC(38)     NOT NULL,
                 nome                        VARCHAR(255)    NOT NULL,
@@ -43,7 +43,7 @@ ALTER TABLE     produtos                    MODIFY COLUMN   imagem_arquivo      
 ALTER TABLE     produtos                    MODIFY COLUMN   imagem_charset      VARCHAR(512)    COMMENT 'Coluna imagem_charset que é responsável por armazenar codificação dos caracteres da imagem do produto.';
 ALTER TABLE     produtos                    MODIFY COLUMN   imagem_ultima_atualizacao   DATE    COMMENT 'Coluna imagem_ultima_atualizacao que é responsável por armazenar a última atualização de um imagem do produto.';
 
--- Criação de tabela com o nome de lojas.
+-- Criação de tabela com nome de lojas que tem como sua função de armazenar os dados como o id da loja, nome da loja, endereço web, endereço físico, latitude, longitude, logo, o mime type do logo, o arquivo do logo,  o charset do logo e a ultima atualização do logo das lojas.
 CREATE TABLE 	lojas (
                 loja_id                     NUMERIC(38)     NOT NULL,
                 nome                        VARCHAR(255)    NOT NULL,
@@ -78,7 +78,7 @@ ALTER TABLE     lojas                       MODIFY COLUMN   logo_arquivo        
 ALTER TABLE     lojas                       MODIFY COLUMN   logo_charset        VARCHAR(512)    COMMENT 'Coluna logo_charset que é responsável por armazenar codificação dos caracteres da imagem de um logo da loja.';
 ALTER TABLE     lojas                       MODIFY COLUMN   logo_ultima_atualizacao     DATE    COMMENT 'Coluna logo_ultima_atualizacao que é responsável por armazenar a última atualização de um logo da loja.';
 
--- Criação de tabela com nome de estoques.
+-- Criação de tabela com o nome de estoques que tem como sua função de armazenar os dados como o id do estoque, o id da loja, o id do produto e a quantidade dos seus estoques.
 CREATE TABLE 	estoques (
                 estoque_id                  NUMERIC(38)     NOT NULL,
                 loja_id                     NUMERIC(38)     NOT NULL,
@@ -99,7 +99,7 @@ ALTER TABLE     estoques                    MODIFY COLUMN   loja_id             
 ALTER TABLE     estoques                    MODIFY COLUMN   produto_id          NUMERIC(38)     COMMENT 'Coluna produto_id que é responsável como identificador da tabela estoques. Ele também é uma chave estrangeira da tabela produtos.';
 ALTER TABLE     estoques                    MODIFY COLUMN   quantidade          NUMERIC(38)     COMMENT 'Coluna quantidade que é responsável por guardar as informações de quantidade dos estoques.';
 
--- Criação de tabela com o nome de lojas.clientes.
+-- Criação de tabela com o nome de clientes que tem como sua função de armazenar os dados como o id do cliente, email, nome e os telefones dos seus clientes.
 CREATE TABLE    clientes (
                 cliente_id                  NUMERIC(38)     NOT NULL,
                 email                       VARCHAR(255)    NOT NULL,
@@ -119,7 +119,7 @@ ALTER TABLE     clientes                    MODIFY COLUMN   telefone1           
 ALTER TABLE     clientes                    MODIFY COLUMN   telefone2           VARCHAR(20) 	COMMENT 'Coluna telefone2 que é responsável por guardar o segundo número de telefone do cliente.';
 ALTER TABLE     clientes                    MODIFY COLUMN   telefone3           VARCHAR(20) 	COMMENT 'Coluna telefone3 que é responsável por guardar o terceiro número de telefone do cliente.';
 
--- Criação de tabela com o nome de lojas.envios.
+-- Criação de tabela com o nome de envios que tem como sua função de armazenar os dados como o id do envio, o id da loja, o id do cliente, o endereço de entrega e o status dos seus envios.
 CREATE TABLE    envios (
                 envio_id                    NUMERIC (38)    NOT NULL,
                 loja_id                     NUMERIC (38)    NOT NULL,
@@ -139,7 +139,7 @@ ALTER TABLE     envios                      MODIFY COLUMN   status              
 
 
 
--- Criação de tabela com o nome de lojas.pedidos.
+-- Criação de tabela com o nome de pedidos que tem como sua função de armazenar os dados como o id do pedido, a data e a hora, id do cliente, o status e o id da loja dos seus pedidos.
 CREATE TABLE    pedidos (
                 pedido_id                   NUMERIC (38)    NOT NULL,
                 data_hora                   TIMESTAMP       NOT NULL,
@@ -156,7 +156,7 @@ ALTER TABLE     pedidos                     MODIFY COLUMN   cliente_id 	        
 ALTER TABLE     pedidos                     MODIFY COLUMN   status              VARCHAR(15)   	COMMENT 'Coluna status que é responsável por mostrar o estado atual dos pedidos.';
 ALTER TABLE     pedidos                     MODIFY COLUMN   loja_id 	        NUMERIC(38)   	COMMENT 'Coluna loja_id que é responsável como identificador da tabela pedidos. Ele também é uma chave estrangeira da tabela lojas.';
 
--- Criação de tabela com o nome de lojas.pedidos_itens.
+-- Criação de tabela com o nome de pedidos_itens que tem como sua função de armazenar os dados como o id pedido, o id do produto, o numero da linha, o preço unitário, a quantidade e o id do envio dos seus itens de pedidos.
 CREATE TABLE 	pedidos_itens (
                 pedido_id                   NUMERIC(38)     NOT NULL,
                 produto_id                  NUMERIC(38)     NOT NULL,
