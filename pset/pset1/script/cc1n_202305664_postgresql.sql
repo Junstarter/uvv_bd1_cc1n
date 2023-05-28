@@ -30,7 +30,7 @@ CREATE 	SCHEMA  IF NOT EXISTS lojas AUTHORIZATION jun;
 ALTER USER	jun
 SET 		SEARCH_PATH TO lojas, "$user", public;
 
---Criação de tabela com o nome de lojas.produtos.
+--Criação de tabela com o nome de produtos que tem como sua função de armazenar os dados como o id do produto, nome do produto, o preço unitário, os detalhes, a imagem, o mime type da imagem, o arquivo da imagem, o charset da imagem e a ultima atualização da imagem dos produtos. 
 CREATE TABLE 	lojas.produtos (
        		produto_id       				NUMERIC(38) 	NOT NULL,
       		nome            				NUMERIC(255) 	NOT NULL,
@@ -71,7 +71,7 @@ COMMENT ON COLUMN lojas.produtos.imagem_charset 		IS 'Coluna imagem_charset que 
 COMMENT ON COLUMN lojas.produtos.imagem_ultima_atualizacao 	IS 'Coluna imagem_ultima_atualizacao que é responsável por armazenar a ultima atualização de um imagem do produto.';
 
 
---Criação de tabela com o nome de lojas.lojas.
+--Criação de tabela com nome de lojas que tem como sua função de armazenar os dados como o id da loja, nome da loja, endereço web, endereço físico, latitude, longitude, logo, o mime type do logo, o arquivo do logo,  o charset do logo e a ultima atualização do logo das lojas.
 CREATE TABLE 	lojas.lojas (
 	     	loja_id 					NUMERIC(38) 	NOT NULL,
              	nome 						VARCHAR(255) 	NOT NULL,
@@ -117,7 +117,7 @@ COMMENT ON COLUMN lojas.lojas.logo_charset			IS 'Coluna logo_charset que é resp
 
 COMMENT ON COLUMN lojas.lojas.logo_ultima_atualizacao		IS 'Coluna logo_ultima_atualizacao que é responsável por armazenar a ultima atualização de um logo da loja.';
 
---Criação de tabela com nome de lojas.estoques.
+--Criação de tabela com o nome de estoques que tem como sua função de armazenar os dados como o id do estoque, o id da loja, o id do produto e a quantidade dos seus estoques.
 CREATE TABLE 	lojas.estoques (
              	estoque_id 					NUMERIC(38) 	NOT NULL,
              	loja_id 					NUMERIC(38) 	NOT NULL,
@@ -143,7 +143,7 @@ COMMENT ON COLUMN lojas.estoques.produto_id			IS 'Coluna produto_id que é respo
 COMMENT ON COLUMN lojas.estoques.quantidade			IS 'Coluna quantidade que é responsável por guardar os informações de quantidade dos estoques.';
 
 
---Criação de tabela com o nome de lojas.clientes.
+--Criação de tabela com o nome de clientes que tem como sua função de armazenar os dados como o id do cliente, email, nome e os telefones dos seus clientes.
 CREATE TABLE 	lojas.clientes (
              	cliente_id 					NUMERIC(38) 	NOT NULL,
              	email 						VARCHAR(255) 	NOT NULL,
@@ -169,7 +169,7 @@ COMMENT ON COLUMN lojas.clientes.telefone2			IS 'Coluna telefone2 que é respons
 
 COMMENT ON COLUMN lojas.clientes.telefone3			IS 'Coluna telefone3 que é responsável por guardar o terceiro número de telefone do cliente.';
 
---Criação de tabela com o nome de lojas.envios.
+--Criação de tabela com o nome de envios que tem como sua função de armazenar os dados como o id do envio, o id da loja, o id do cliente, o endereço de entrega e o status dos seus envios.
 CREATE TABLE 	lojas.envios (
 	     	envio_id 					NUMERIC(38) 	NOT NULL,
 	     	loja_id 					NUMERIC(38) 	NOT NULL,
@@ -193,7 +193,7 @@ COMMENT ON COLUMN lojas.envios.endereco_entrega			IS 'Coluna endereco_entrega qu
 COMMENT ON COLUMN lojas.envios.status				IS 'Coluna status que é responsável por mostrar o estado atual dos envios.';
 
 
---Criação de tabela com o nome de lojas.pedidos.
+--Criação de tabela com o nome de pedidos que tem como sua função de armazenar os dados como o id do pedido, a data e a hora, id do cliente, o status e o id da loja dos seus pedidos. 
 CREATE TABLE 	lojas.pedidos (
 	     	pedido_id 					NUMERIC(38) 	NOT NULL,
 	     	data_hora 					TIMESTAMP 	NOT NULL,
@@ -215,7 +215,7 @@ COMMENT ON COLUMN lojas.pedidos.status				IS 'Coluna status que é responsável 
 COMMENT ON COLUMN lojas.pedidos.loja_id				IS 'Coluna loja_id que é responsável como identificador da tabela pedidos. Ele tambem é uma chave estrangeira da tabela lojas.';
 
 
---Criação de tabela com o nome de lojas.pedidos-itens.
+--Criação de tabela com o nome de pedidos_itens que tem como sua função de armazenar os dados como o id pedido, o id do produto, o numero da linha, o preço unitário, a quantidade e o id do envio dos seus itens de pedidos.
 CREATE TABLE 	lojas.pedidos_itens (
              	pedido_id 					NUMERIC(38) 	NOT NULL,
              	produto_id 					NUMERIC(38) 	NOT NULL,
