@@ -1,6 +1,6 @@
 <br>
  <div align="end"><p strong>Problem_Set #1<br></p></div>
-<br><br><samp>
+<br><br><samp> 
  <div strong align="center"><h1>Diagrama de Lojas UVV</h1></div>
 <br>
 <h2>O diagrama abaixo está disponível como um arquivo de imagem anexado no nosso PSET,
