@@ -43,9 +43,9 @@ Não tenha medo de pedir as ajudas dos outros!! Os devs mais experientes da áre
 
  <br><br>
  
-1. O nosso primeiro dever foi a representação de diagrama pelo "SQL Power Architect". 
+🐬1. O nosso primeiro dever foi a representação de diagrama pelo "SQL Power Architect". 
   Aquí está o script feito na "MariaDB" [cc1n_202305664_mysql.sql](https://github.com/nomenome-cmd/uvv_bd1_cc1n/blob/main/pset/pset1/script/cc1n_202305664_mysql.sql);</p>
-2. Em seguida, gerei um codigo script do arquivo pós a criação de diagrama.           
+🐘2. Em seguida, gerei um codigo script do arquivo pós a criação de diagrama.           
   Aquí está o script feito na "PostgreSQL" [cc1n_202305664_postgresql.sql](https://github.com/nomenome-cmd/uvv_bd1_cc1n/blob/main/pset/pset1/script/cc1n_202305664_postgresql.sql);
 </p>
 
@@ -85,8 +85,6 @@ Não tenha medo de pedir as ajudas dos outros!! Os devs mais experientes da áre
 	
 
 </samp>
-</div>
-<div align="start">[<-](https://github.com/nomenome-cmd/uvv_bd1_cc1n/tree/main/pset/pset1)</div> <div align="end">-></div>
 
 <div align="end"><h2><strong>uvv_bd1_cc1n</strong></h2></div>
 <br><br>
