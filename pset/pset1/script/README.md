@@ -86,7 +86,7 @@ Não tenha medo de pedir as ajudas dos outros!! Os devs mais experientes da áre
 
 </samp>
 </div>
-<div align="start">[ ↩️ ](https://github.com/nomenome-cmd/uvv_bd1_cc1n/tree/main/pset/pset1)</div> <div align="end">↪️</div>
+<div align="start">[↩](https://github.com/nomenome-cmd/uvv_bd1_cc1n/tree/main/pset/pset1)</div> <div align="end">↪</div>
 
 <div align="end"><h2><strong>uvv_bd1_cc1n</strong></h2></div>
 <br><br>
