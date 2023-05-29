@@ -3,7 +3,7 @@
 <br><br><samp>
  <div strong align="center"><h1>Script de Lojas UVV</h1></div>
 <br>
-<h2>A nossa tarefa é descobrir, por conta própria, como utilizar o PostgreSQL e como implementar o modelo lógico descrito na diagrama do Banco de dados: "Lojas UVV", nesse SGBD.<br><br>
+<h2>A nossa tarefa foi descobrir, por conta própria, como utilizar o PostgreSQL e como implementar o modelo lógico descrito na diagrama do Banco de dados: "Lojas UVV", nesse SGBD.<br><br>
 <br>
 
 <p align="center">
@@ -34,7 +34,11 @@ Procuramos a saber sobre o PostgreSQL em particular, e também fomos pedir as aj
  <br><br>
 
 	
-Atenção: você pode utilizar algumas interfaces gráficas que já estão prontas na máquina virtual para trabalhar com o PostgreSQL e testar todos os comandos SQL que serão necessários, tais como o PgAdmin ou o DBeaver, mas o resultado final a ser publicado em seu repositório GitHub é o script SQL que eu devo executar em meu computador. 
+[Atenção:] Não recomendo a você tentar aprender o SGBD sosinho, quanto mais iniciante nesta área mais tempo irá gastar para compreenção de termos e conceitos. 
+
+Não tenha medo de pedir as ajudas dos outros!! Os devs mais experientes da área com certeza irá te ajudar a compreender melhor sobre este conteúdo. ( Ou qualquer coisa você vai até 'Github' do seu veterano ou no Google mesmo para procurar o banco de dados já feito. Não tenha vergonha de vê-las, o importante é você entender a matéria e fazer o seu proprio!!)
+
+pode utilizar algumas interfaces gráficas que já estão prontas na máquina virtual para trabalhar com o PostgreSQL e testar todos os comandos SQL que serão necessários, tais como o PgAdmin ou o DBeaver, mas o resultado final a ser publicado em seu repositório GitHub é o script SQL que eu devo executar em meu computador. 
 <br>
 
 Esse script SQL deve ter todos os comandos, na ordem correta e com comentários adequados, para que eu possa simplesmente rodar o script e avaliar o trabalho que você fez.
