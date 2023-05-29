@@ -13,8 +13,8 @@
  <br>
 
 Procuramos a saber sobre o PostgreSQL em particular, e também fomos pedir as ajudas para a nossa monitora da Matéria de 'Design e Desenvolvimento de Banco de Dados I'. 
+
 <br>
-	
 	🎓 1. Aquí está o Github da Monitora de BDs_2023:</p> 
 	>>>[SuellenMiranda](https://github.com/SuellenMiranda);</p>
 	👑 2. Aquí está o Github da colega que mais ajudou a entender melhor sobre o PSET:</p> 
