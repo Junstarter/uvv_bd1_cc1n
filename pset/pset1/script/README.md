@@ -29,12 +29,12 @@ Procuramos a saber sobre o PostgreSQL em particular, e também fomos pedir as aj
 <p align="center">
 <img src="https://www.timescale.com/blog/content/images/2023/03/PostgreSQL-Developer-Perspective-commitfest--1-.png"></p>
  <br>
- <div strong align="end">[Link para o site do PostgreSQL](https://aluno.uvv.br/Aluno/BaixarArquivoPost?aId=NDUwNzQ4&pId=709969](https://www.postgresql.org)</div>
+ <div strong align="end">[Link para o site do PostgreSQL](https://www.postgresql.org)</div>
 
  <br><br>
 
 	
-[Atenção:] Não recomendo a você tentar aprender o SGBD sosinho, quanto mais iniciante você é nesta área mais tempo irá gastar para compreenção de termos e conceitos. 
+[Atenção:] Não recomendo a você tentar aprender o SGBD sozinho, quanto mais iniciante você é nesta área mais tempo irá gastar para compreenção de termos e conceitos. 
 
 Não tenha medo de pedir as ajudas dos outros!! Os devs mais experientes da área com certeza irá te ajudar a compreender melhor sobre este conteúdo. ( Ou qualquer coisa você vai até 'Github' do seu veterano ou no Google mesmo para procurar o banco de dados já feito. Não tenha vergonha de vê-las, o importante é você entender a matéria e fazer o seu proprio!!)
 
