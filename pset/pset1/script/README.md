@@ -34,7 +34,7 @@ Procuramos a saber sobre o PostgreSQL em particular, e também fomos pedir as aj
  <br><br>
 
 	
-[Atenção:] Não recomendo a você tentar aprender o SGBD sosinho, quanto mais iniciante nesta área mais tempo irá gastar para compreenção de termos e conceitos. 
+[Atenção:] Não recomendo a você tentar aprender o SGBD sosinho, quanto mais iniciante você é nesta área mais tempo irá gastar para compreenção de termos e conceitos. 
 
 Não tenha medo de pedir as ajudas dos outros!! Os devs mais experientes da área com certeza irá te ajudar a compreender melhor sobre este conteúdo. ( Ou qualquer coisa você vai até 'Github' do seu veterano ou no Google mesmo para procurar o banco de dados já feito. Não tenha vergonha de vê-las, o importante é você entender a matéria e fazer o seu proprio!!)
 
