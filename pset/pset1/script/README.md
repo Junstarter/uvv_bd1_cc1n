@@ -14,11 +14,11 @@
 
 Procuramos a saber sobre o PostgreSQL em particular, e também fomos pedir as ajudas para a nossa monitora da Matéria de 'Design e Desenvolvimento de Banco de Dados I'. 
 <br>
-	1. Aquí está o Github da Monitora de BDs_2023:</p> 
+	👩‍🎓 1. Aquí está o Github da Monitora de BDs_2023:</p> 
 	>>>[SuellenMiranda](https://github.com/SuellenMiranda);</p>
 	👑 2. Aquí está o Github da colega que mais ajudou a entender melhor sobre o PSET:</p> 
 	>>>[Marcos Filipe de Paula Macêdo](https://github.com/Marcos-Macedo444);</p>
-	3. Aquí está o Github da colega que ajudou fazer o PSET:</p> 
+	🌟 3. Aquí está o Github da colega que ajudou fazer o PSET:</p> 
 	>>>[Táilon Cypreste Brandini](https://github.com/TailonBrandini) e o >>>[Guilherme dos Santos Souza](https://github.com/Guilherme027).
 <br><br>
 <br><br>
@@ -43,9 +43,9 @@ Não tenha medo de pedir as ajudas dos outros!! Os devs mais experientes da áre
 
  <br><br>
  
-🐬1. O nosso primeiro dever foi a representação de diagrama pelo "SQL Power Architect". 
+🐬 1. O nosso primeiro dever foi a representação de diagrama pelo "SQL Power Architect". 
   Aquí está o script feito na "MariaDB" [cc1n_202305664_mysql.sql](https://github.com/nomenome-cmd/uvv_bd1_cc1n/blob/main/pset/pset1/script/cc1n_202305664_mysql.sql);</p>
-🐘2. Em seguida, gerei um codigo script do arquivo pós a criação de diagrama.           
+🐘 2. Em seguida, gerei um codigo script do arquivo pós a criação de diagrama.           
   Aquí está o script feito na "PostgreSQL" [cc1n_202305664_postgresql.sql](https://github.com/nomenome-cmd/uvv_bd1_cc1n/blob/main/pset/pset1/script/cc1n_202305664_postgresql.sql);
 </p>
 
