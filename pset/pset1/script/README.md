@@ -1,9 +1,59 @@
 <br>
  <div align="end"><p strong>Problem_Set #1<br></p></div>
 <br><br><samp>
- <div strong align="center"><h1>Trabalho de Banco de Dados!</h1></div>
+ <div strong align="center"><h1>Script de Lojas UVV</h1></div>
 <br>
-<h2>Um banco de dados é um sistema para armazenar e gerenciar informações de forma organizada. É como uma coleção de tabelas que armazenam dados para serem facilmente acessados e utilizados quando necessário.
+<h2>A nossa tarefa é descobrir, por conta própria, como utilizar o PostgreSQL e como implementar o modelo lógico descrito na diagrama do Banco de dados: "Lojas UVV", nesse SGBD.<br><br>
+<br>
+
+<p align="center">
+<img src="https://media.discordapp.net/attachments/712134235854733404/1112421601510703204/5F3D5129-4FA1-4A23-82B6-75E8632422DF.png?width=775&height=499"></p>
+<br>
+ <div strong align="end">[Arquivo do PSET](https://aluno.uvv.br/Aluno/BaixarArquivoPost?aId=NDUwNzQ4&pId=709969)</div>
+ <br>
+
+Procuramos a saber sobre o PostgreSQL em particular, e também fomos pedir as ajudas para a nossa monitora da Matéria de 'Design e Desenvolvimento de Banco de Dados I'. 
+<br>
+	1. Aquí está o Github da Monitora de BDs_2023:</p> 
+	>>>[SuellenMiranda](https://github.com/SuellenMiranda);</p>
+	2. Aquí está o Github da colega que mais ajudou a entender melhor sobre o PSET:</p> 
+	>>>[Marcos Filipe de Paula Macêdo](https://github.com/Marcos-Macedo444);</p>
+	3. Aquí está o Github da colega que ajudou fazer o PSET:</p> 
+	>>>[Táilon Cypreste Brandini](https://github.com/TailonBrandini) e o >>>[Guilherme dos Santos Souza](https://github.com/Guilherme027).
+<br><br>
+<br><br>
+
+>"O'que fez tornar-se importante foi a gente ter aprendido a utilizar o 'PostgreSQL' por conta propría para criar um Banco de Dados!!"<br><br>
+
+
+<p align="center">
+<img src="https://www.timescale.com/blog/content/images/2023/03/PostgreSQL-Developer-Perspective-commitfest--1-.png"></p>
+ <br>
+ <div strong align="end">[Link para o site do PostgreSQL](https://aluno.uvv.br/Aluno/BaixarArquivoPost?aId=NDUwNzQ4&pId=709969](https://www.postgresql.org)</div>
+
+ <br><br>
+
+	
+Atenção: você pode utilizar algumas interfaces gráficas que já estão prontas na máquina virtual para trabalhar com o PostgreSQL e testar todos os comandos SQL que serão necessários, tais como o PgAdmin ou o DBeaver, mas o resultado final a ser publicado em seu repositório GitHub é o script SQL que eu devo executar em meu computador. 
+<br>
+
+Esse script SQL deve ter todos os comandos, na ordem correta e com comentários adequados, para que eu possa simplesmente rodar o script e avaliar o trabalho que você fez.
+<br>
+
+A nossa primeira tarefa foi usar o SQL Power Architect para replicar exatamente o
+projeto lógico ilustrado abaixo (mantendo até mesmo erros, se for o caso), no padrão
+do PostgreSQL.
+<br>
+
+ <br><br>
+ 
+1. O nosso primeiro dever foi a representação de diagrama pelo "SQL Power Architect". 
+  Aquí está o script feito na "MariaDB" [cc1n_202305664_mysql.sql](https://github.com/nomenome-cmd/uvv_bd1_cc1n/blob/main/pset/pset1/script/cc1n_202305664_mysql.sql);</p>
+2. Em seguida, gerei um codigo script do arquivo pós a criação de diagrama.           
+  Aquí está o script feito na "PostgreSQL" [cc1n_202305664_postgresql.sql](https://github.com/nomenome-cmd/uvv_bd1_cc1n/blob/main/pset/pset1/script/cc1n_202305664_postgresql.sql);
+</p>
+
+<br><br>
 
 <br><br>
 
@@ -14,19 +64,6 @@
 <img src="https://github.com/nomenome-cmd/uvv_bd1_cc1n/assets/116921226/ebad47f6-8785-471f-b19f-f08f203ad544"></p>
 
 <div strong align="end">[sobre](https://github.com/abrantesasf)</div>
-	
-<br><br>
-
-<div strong align="center">Sobre aluno</div>
-<h2 strong><p align="start"><br>
- Nome: Erick Jun Kato</p>
- Idade: 18 anos</p>
- Turma: CC1N</p>
- Ano_Período: 2023_1período</p>
- Curso: Ciência de Computação</p>
- Matéria: Design e desenvolvimento de Banco de Dados</p>
- Professor: Abrantes Araújo Silva Filho</p>
- Conteúdo: Banco de Dados_sql</p>
 
 <br><br><br><br><br><br>
 
@@ -46,7 +83,7 @@
 
 <br><br><br>
 	
->Publicado em Infra, Máquinas virtuaisMarcado com MariaDB, MySQL, oracle, postgres, PostgreSQL, SBD, sgbd, SQL Server5 comentários
+<br><br>
 	
 <br><br>
 	
@@ -58,4 +95,3 @@
 <div align="end"><h2><strong>uvv_bd1_cc1n</strong></h2></div>
 <br><br>
 <br><br><br>
-
