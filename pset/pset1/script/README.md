@@ -38,15 +38,7 @@ Procuramos a saber sobre o PostgreSQL em particular, e também fomos pedir as aj
 
 Não tenha medo de pedir as ajudas dos outros!! Os devs mais experientes da área com certeza irá te ajudar a compreender melhor sobre este conteúdo. ( Ou qualquer coisa você vai até 'Github' do seu veterano ou no Google mesmo para procurar o banco de dados já feito. Não tenha vergonha de vê-las, o importante é você entender a matéria e fazer o seu proprio!!)
 
-pode utilizar algumas interfaces gráficas que já estão prontas na máquina virtual para trabalhar com o PostgreSQL e testar todos os comandos SQL que serão necessários, tais como o PgAdmin ou o DBeaver, mas o resultado final a ser publicado em seu repositório GitHub é o script SQL que eu devo executar em meu computador. 
-<br>
 
-Esse script SQL deve ter todos os comandos, na ordem correta e com comentários adequados, para que eu possa simplesmente rodar o script e avaliar o trabalho que você fez.
-<br>
-
-A nossa primeira tarefa foi usar o SQL Power Architect para replicar exatamente o
-projeto lógico ilustrado abaixo (mantendo até mesmo erros, se for o caso), no padrão
-do PostgreSQL.
 <br>
 
  <br><br>
