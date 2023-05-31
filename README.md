@@ -45,11 +45,7 @@
  </div>
 
 <br><br><br>
-	
->Publicado em Infra, Máquinas virtuaisMarcado com MariaDB, MySQL, oracle, postgres, PostgreSQL, SBD, sgbd, SQL Server5 comentários
-	
-<br><br>
-	
+
 
 </samp>
 </div>
