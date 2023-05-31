@@ -27,7 +27,7 @@ CREATE TABLE 	produtos (
 CONSTRAINT      pk_produtos                 PRIMARY KEY     (produto_id)
 );
 
--- Checkagem da tabela lojas.produtos para o preço da unidade do produto não ser negativo e nem zero.
+-- Checkagem da tabela produtos para o preço da unidade do produto não ser negativo e nem zero.
 ALTER TABLE     produtos
 ADD CHECK       (preco_unitario > 0);
 
@@ -59,12 +59,12 @@ CREATE TABLE 	lojas (
 CONSTRAINT      pk_lojas                    PRIMARY KEY     (loja_id)
 );
 
--- Checkagem da tabela lojas.lojas para o preço do produto não ser negativo e nem zero.
+-- Checkagem da tabela lojas para o preço do produto não ser negativo e nem zero.
 ALTER TABLE     lojas
 ADD CONSTRAINT  ck_endereco_fisico_e_web_lojas
 CHECK           (endereco_fisico IS NOT NULL OR endereco_web IS NOT NULL);
 
--- Comentários para explicações de tabela e colunas de tabela lojas.lojas.
+-- Comentários para explicações de tabela e colunas de tabela lojas.
 ALTER TABLE     lojas                       COMMENT 'A tabela lojas que tem por sua responsabilidade de guardar os dados das lojas.';
 ALTER TABLE     lojas                       MODIFY COLUMN   loja_id             NUMERIC(38)     COMMENT 'Coluna loja_id que é responsável como identificador único da tabela lojas. Ele também é uma chave primária da tabela lojas.';
 ALTER TABLE     lojas                       MODIFY COLUMN   nome                VARCHAR(255)    COMMENT 'Coluna nome que é responsável por guardar o nome da loja.';
@@ -87,12 +87,12 @@ CREATE TABLE 	estoques (
 CONSTRAINT      pk_estoques                 PRIMARY KEY     (estoque_id)
 );
 
--- Checkagem da tabela lojas.estoques para a quantidade do estoque ser maior que zero.
+-- Checkagem da tabela estoques para a quantidade do estoque ser maior que zero.
 ALTER TABLE     estoques
 ADD CONSTRAINT  ck_quantidades_estoques
 CHECK           (quantidade > 0);
 
--- Comentários para explicações de tabela e colunas de tabela lojas.estoques.
+-- Comentários para explicações de tabela e colunas de tabela estoques.
 ALTER TABLE     estoques                    COMMENT 'A tabela estoques que tem por sua responsabilidade de guardar os estoques dos produtos para as lojas.';
 ALTER TABLE     estoques                    MODIFY COLUMN   estoque_id          NUMERIC(38)     COMMENT 'Coluna estoques_id que é responsável como identificador único da tabela estoques. Ele também é uma chave primária da tabela estoques.';
 ALTER TABLE     estoques                    MODIFY COLUMN   loja_id             NUMERIC(38)     COMMENT 'Coluna loja_id que é responsável como identificador da tabela estoques. Ele também é uma chave estrangeira da tabela lojas.';
@@ -110,7 +110,7 @@ CREATE TABLE    clientes (
 CONSTRAINT      pk_clientes                 PRIMARY KEY     (cliente_id)
 );
 
--- Comentários para explicações de tabela e colunas de tabela lojas.clientes.
+-- Comentários para explicações de tabela e colunas de tabela clientes.
 ALTER TABLE     clientes                    COMMENT 'A tabela Clientes que tem por sua responsabilidade de guardar os dados dos seus clientes.';
 ALTER TABLE     clientes                    MODIFY COLUMN   cliente_id          NUMERIC(38)  	COMMENT 'Coluna cliente_id que é responsável como identificador único da tabela clientes. Ele também é uma chave primária da tabela clientes.';
 ALTER TABLE     clientes                    MODIFY COLUMN   email               VARCHAR(255)   	COMMENT 'Coluna email que é responsável por guardar o email do cliente.';
@@ -130,7 +130,7 @@ CONSTRAINT      pk_envios                   PRIMARY KEY     (envio_id)
 );
 
 --Checagem da tabela envios para restringir a inserção de dados da coluna status para ser: Criado, Envios, Transito, Entregue.
-ALTER TABLE     lojas.envios
+ALTER TABLE     envios
 ADD CONSTRAINT  ck_status
 CHECK           (status in ('CRIADO', 'ENVIADO', 'TRANSITO', 'ENTREGUE'));
 
@@ -156,9 +156,9 @@ CONSTRAINT      pk_pedidos                  PRIMARY KEY     (pedido_id)
 );
 
 --Checagem da tabela pedidos para restringir a inserção de dados da coluna status para ser: Cancelado, Completo, Aberto, Pago, Reembolsa, Enviado.
-ALTER TABLE     lojas.pedidos
+ALTER TABLE     pedidos
 ADD CONSTRAINT  ck_status
-CHECK           (status in ('CANCELADO', 'COMPLETO', 'ABERTO', 'PAGO', 'REEMBOLSADO', 'ENVIADO');
+CHECK           (status in ('CANCELADO', 'COMPLETO', 'ABERTO', 'PAGO', 'REEMBOLSADO', 'ENVIADO'));
 
 
 -- Comentários para explicações de tabela e colunas de tabela lojas.pedidos.
@@ -179,7 +179,7 @@ CREATE TABLE 	pedidos_itens (
 CONSTRAINT      pk_pedidos_itens            PRIMARY KEY     (pedido_id, produto_id)
 );
 
--- Comentários para explicações de tabela e colunas de tabela lojas.pedidos_itens.
+-- Comentários para explicações de tabela e colunas de tabela pedidos_itens.
 ALTER TABLE     pedidos_itens               COMMENT 'A tabela pedidos_itens que tem por sua responsabilidade de verificar os pedidos de produto e é responsável para remeter essas informações à tabela envios.';
 ALTER TABLE     pedidos_itens               MODIFY COLUMN   pedido_id           NUMERIC(38)   	COMMENT 'Coluna pedido_id que é responsável como identificador da tabela pedidos_itens. Ele também é uma chave primária da tabela pedidos_itens e uma chave estrangeira da tabela pedidos.';
 ALTER TABLE     pedidos_itens               MODIFY COLUMN   produto_id          NUMERIC(38)   	COMMENT 'Coluna produto_id que é responsável como identificador da tabela pedidos_itens. Ele também é uma chave primária da tabela pedidos_itens e uma chave estrangeira da tabela produtos.';
