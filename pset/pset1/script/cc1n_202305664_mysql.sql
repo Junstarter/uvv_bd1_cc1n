@@ -129,10 +129,10 @@ CREATE TABLE    envios (
 CONSTRAINT      pk_envios                   PRIMARY KEY     (envio_id)
 );
 
---Checagem da tabela envios para restringir a inserção de dados da coluna status para ser: Cancelado, Completo, Aberto, Pago, Reembolsa, Enviado.
+--Checagem da tabela envios para restringir a inserção de dados da coluna status para ser: Criado, Envios, Transito, Entregue.
 ALTER TABLE     lojas.envios
 ADD CONSTRAINT  ck_status
-CHECK           (status in ('CRIADO', 'ENVIADO', 'TRANSITO', 'ENTREGUE');
+CHECK           (status in ('CRIADO', 'ENVIADO', 'TRANSITO', 'ENTREGUE'));
 
 
 -- Comentários para explicações de tabela e colunas de tabela lojas.envios.
