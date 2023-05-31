@@ -1,4 +1,4 @@
-<br> ]
+<br> 
  <div align="end"><p strong>Problem_Set #1<br></p></div>
 <br><br><samp>
  <div strong align="center"><h1>Script de Lojas UVV</h1></div>
@@ -15,12 +15,14 @@
 Procuramos a saber sobre o PostgreSQL em particular, e também fomos pedir as ajudas para a nossa monitora da Matéria de 'Design e Desenvolvimento de Banco de Dados I'. 
 
 <br>
-	🎓 1. Aquí está o Github da Monitora de BDs_2023:</p> 
-	>>>[SuellenMiranda](https://github.com/SuellenMiranda);</p>
-	👑 2. Aquí está o Github da colega que mais ajudou a entender melhor sobre o PSET:</p> 
-	>>>[Marcos Filipe de Paula Macêdo](https://github.com/Marcos-Macedo444);</p>
-	🔰 3. Aquí está o Github da colega que ajudou fazer o PSET:</p> 
-	>>>[Táilon Cypreste Brandini](https://github.com/TailonBrandini) e o >>>[Guilherme dos Santos Souza](https://github.com/Guilherme027).
+	
+🎓 1. Aquí está o Github da Monitora de BDs_2023:</p> 
+=> [SuellenMiranda;](https://github.com/SuellenMiranda)</p>
+👑 2. Aquí está o Github da colega que mais ajudou a entender melhor sobre o PSET:</p> 
+=> [Marcos Filipe de Paula Macêdo](https://github.com/Marcos-Macedo444);</p>
+🔰 3. Aquí está o Github da colega que ajudou fazer o PSET:</p> 
+=> [Táilon Cypreste Brandini](https://github.com/TailonBrandini) e o [Guilherme dos Santos Souza](https://github.com/Guilherme027).
+	
 <br><br>
 <br><br>
 
@@ -37,13 +39,26 @@ Procuramos a saber sobre o PostgreSQL em particular, e também fomos pedir as aj
 	
 [Atenção:] Não recomendo a você tentar aprender o SGBD sozinho, quanto mais iniciante você é nesta área mais tempo irá gastar para compreenção de termos e conceitos. 
 
-Não tenha medo de pedir as ajudas dos outros!! Os devs mais experientes da área com certeza irá te ajudar a compreender melhor sobre este conteúdo. ( Ou qualquer coisa você vai até 'Github' do seu veterano ou no Google mesmo para procurar o banco de dados já feito. Não tenha vergonha de vê-las, o importante é você entender a matéria e fazer o seu proprio!!)
+<br>
 
+Não tenha medo de pedir as ajudas dos outros!! Os devs mais experientes da área com certeza irá te ajudar a compreender melhor sobre este conteúdo.</p>
+(Ou qualquer coisa você vai até 'Github' do seu veterano ou no Google mesmo para procurar o banco de dados já feito. Não tenha vergonha de vê-las, o importante é você entender a matéria e fazer o seu proprio!!)
+
+
+<br><br><br>
+<br><br>
+<br><br>
+
+<div strong align="center">PostgreSQL e MariaDB</div></h2>
+
+<br><br>
+
+<h2>
+	
+>Scripts:
 
 <br>
 
- <br><br>
- 
 🐬 1. O nosso primeiro dever foi a representação de diagrama pelo "SQL Power Architect". 
   Aquí está o script feito na "MariaDB" [cc1n_202305664_mysql.sql](https://github.com/nomenome-cmd/uvv_bd1_cc1n/blob/main/pset/pset1/script/cc1n_202305664_mysql.sql);</p>
 🐘 2. Em seguida, gerei um codigo script do arquivo pós a criação de diagrama.           
